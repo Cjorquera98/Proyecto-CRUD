@@ -46,3 +46,19 @@ function loadItems() {
     itemList.appendChild(tr);
   }
 }
+
+function addItem() {
+  const newItemNombre = document.getElementById("newItemNombre").value;
+  const newItemEdad = document.getElementById("newItemEdad").value;
+  const newItemDireccion = document.getElementById("newItemDireccion").value;
+
+  if (newItemNombre && newItemEdad && newItemDireccion) {
+    const key = Date.now().toString();
+    const newItem = { nombre: newItemNombre, edad: newItemEdad, direccion: newItemDireccion };
+    localStorage.setItem(key, JSON.stringify(newItem));
+    loadItems();
+    document.getElementById("newItemNombre").value = "";
+    document.getElementById("newItemEdad").value = "";
+    document.getElementById("newItemDireccion").value = "";
+  }
+}
