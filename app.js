@@ -62,3 +62,27 @@ function addItem() {
     document.getElementById("newItemDireccion").value = "";
   }
 }
+
+
+function editItem(key, item) {
+  const newNombre = prompt("Ingrese nuevo nombre:", item.nombre);
+  const newEdad = prompt("Ingrese nueva edad:", item.edad);
+  const newDireccion = prompt("Ingrese nueva direccion:", item.direccion);
+
+  if (newNombre && newEdad && newDireccion) {
+    item.nombre = newNombre;
+    item.edad = newEdad;
+    item.direccion = newDireccion;
+    localStorage.setItem(key, JSON.stringify(item));
+    loadItems();
+  }
+}
+
+function deleteItem(key) {
+  localStorage.removeItem(key);
+  loadItems();
+}
+
+
+
+
