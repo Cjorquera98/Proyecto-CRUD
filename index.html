@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://www.freecodecamp.org/news/content/images/2022/06/crud.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <title>CRUD</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¿Que es un CRUD?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Otros</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contenedor1">
+      <div class="encabezado">
+        <h2> Aplicacion CRUD</h2>
+      </div>
+    </section>
+
+    <section class="contenedor2">
+      <div class="items1">
+        <div class="datos">
+          <h4>Agregar datos</h4>
+        </div>
+        <label for="newItemNombre">Nombre:</label>
+        <input type="text" class="form-control" id="newItemNombre" placeholder="Ingrese nombre">
+        <br>
+        <label for="newItemEdad">Edad:</label>
+        <input type="number" class="form-control" id="newItemEdad" placeholder="Ingrese edad">
+        <br>
+        <label for="newItemDireccion">Direccion:</label>
+        <input type="text" class="form-control" id="newItemDireccion" placeholder="Ingrese Direccion">
+        <br>
+        <button class="btn btn-primary" onclick="addItem()">Agregar</button>
+      </div>
+    </section>
+
+    <section class="contenedor3">
+      <div class="Items2">
+        <h4>Datos</h4>
+        <table class="table table-sm">
+          <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Direccion</th>
+            <th>Accion</th>
+          </tr>
+          <tbody id="itemList"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="./app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
