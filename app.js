@@ -25,15 +25,19 @@ function loadItems() {
 
     const editarButton = document.createElement("button");
     editarButton.textContent = "Editar";
+    editarButton.style.margin = "10px"
+    editarButton.style.borderRadius = "5px"
     editarButton.onclick = function () {
       editItem(key, item);
     };
 
     const borrarButton = document.createElement("button");
     borrarButton.textContent = "Borrar";
+    borrarButton.style.borderRadius = "5px"
     borrarButton.onclick = function () {
       deleteItem(key);
     };
+
 
     tdActions.appendChild(editarButton);
     tdActions.appendChild(borrarButton);
@@ -45,6 +49,8 @@ function loadItems() {
 
     itemList.appendChild(tr);
   }
+
+
 }
 
 function addItem() {
